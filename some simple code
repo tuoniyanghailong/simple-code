@@ -2,3 +2,22 @@ for(int k=1;k<=n;k++){
 	for(int i=1;i<=n;i++){
 		for(int j=1;j<=n;j++){
 			if(ans[k-1][i][k]==无穷||ans[k-1][k][j]==无穷){
+			ans[k][i][j]=ans[k-1][i][j];
+			continue;
+			}
+			if(ans[k-1][i][j]==无穷||ans[k-1][i][k]+ans[k-1][k][j]<ans[k-1][i][j])
+			ans[k][i][j]=ans[k-1][i][k]+ans[k-1][k][j];
+			else ans[k][i][j]=ans[k-1][i][j];
+			}
+		}
+	}
+	
+for(int k=1;k<=n;k++）{
+	for(int i=1;i<=n;i++){
+		for(int j=1;j<=n;j++){
+		      if(ans[i][k]==无穷||ans[k][j]==无穷) continue;
+		      if(ans[i][j]==无穷||ans[i][k]+ans[k][j]<ans[i][j])
+		          ans[i][j]=ans[i][k]+ans[k][j];
+			  }
+		}
+	}
